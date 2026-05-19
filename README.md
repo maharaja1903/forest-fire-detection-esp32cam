@@ -53,6 +53,46 @@ pip install -r requirements.txt
 
 ---
 
+## TensorRT Setup
+
+This project uses TensorRT optimized YOLOv11 engine (`best.engine`) for high-speed real-time inference.
+
+### Requirements
+
+* NVIDIA GPU
+* CUDA Toolkit
+* cuDNN
+* TensorRT
+* Python 3.10
+
+---
+
+## Install TensorRT
+
+Download TensorRT from NVIDIA official website:
+
+https://developer.nvidia.com/tensorrt
+
+---
+
+## Export YOLOv11 Model to TensorRT Engine
+
+Run:
+
+```bash
+yolo export model=best.pt format=engine
+```
+
+This generates:
+
+```text
+best.engine
+```
+
+which is used for accelerated inference.
+
+---
+
 ## Project Structure
 
 ```text
@@ -125,8 +165,8 @@ screenshots/
 Example:
 
 * detection1.png
-* telegram_alert.png
 * fire_detected.png
+* alert_message.png
 
 ---
 
@@ -140,8 +180,9 @@ Example:
 
 ---
 
-## Author
+## Authors
 
-Maharaja
-Santhiga
+* Maharaja
+* Santhiga
+
 ---
