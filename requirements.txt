@@ -1,0 +1,8 @@
+
+ultralytics
+opencv-python
+twilio
+torch
+torchvision
+numpy
+python-dotenv
